@@ -1,4 +1,4 @@
-﻿﻿﻿﻿<!doctype html>
+﻿﻿<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -805,12 +805,14 @@
             <img src="img/Grass_Block_JE7_BE6.png" alt="LXElauncher" draggable="false">
             <span>LXElauncher</span>
           </button>
-          <span class="home-version-sub" id="homeVersionSub">v1.0 · 免费 · 支持正版 / 离线 / 第三方登录</span>
+          <span class="home-version-sub" id="homeVersionSub">v1.0 · 免费 · 支持离线 / 第三方登录</span>
         </div>
         <button class="home-side-btn" id="openChangelog" data-tip="更新日志" title="更新日志"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i></button>
       </div>
 
       <button class="launch-btn" id="downloadLauncherBtn"><i class="fa-solid fa-download" aria-hidden="true"></i><span>下载启动器</span></button>
+
+      <div class="mc-disclaimer">非 MINECRAFT 官方产品。未经 MOJANG 或 MICROSOFT 批准，也不与 MOJANG 或 MICROSOFT 关联</div>
     </section>
 
     <!-- 下载页（启动器下载） -->
@@ -863,13 +865,13 @@
             <div class="settings-card">
               <div class="form-label">系统要求</div>
               <div style="font-size:13px;color:var(--text-secondary);line-height:1.9;">
-                Windows 10+ / macOS 11+ / Linux（x64 与 ARM64）；建议 4GB 以上内存；启动器内置 Java 自动检测与一键安装，无需手动配置 Java 环境。
+                Windows 10+（x64）；建议 4GB 以上内存；启动器内置 Java 自动检测与一键安装，无需手动配置 Java 环境。
               </div>
             </div>
             <div class="settings-card">
               <div class="form-label">功能特性</div>
               <div style="font-size:13px;color:var(--text-secondary);line-height:1.9;">
-                全版本支持：原版 / Forge / Fabric / NeoForge / Quilt / OptiFine；多账号管理：微软正版、离线、第三方认证；多线程高速下载 + 国内镜像 + 断点续传；模组与整合包一键安装管理。
+                全版本支持：原版 / Forge / Fabric / NeoForge / Quilt / OptiFine；多账号管理：离线、第三方认证；多线程高速下载 + 国内镜像 + 断点续传；模组与整合包一键安装管理。
               </div>
             </div>
           </div>
@@ -904,6 +906,7 @@
     .chg-notes { font-size: 13px; color: var(--text-secondary); line-height: 1.8; padding: 6px 0 0 18px; }
     .chg-notes li { margin-bottom: 3px; }
     .feat-wrap { display: flex; flex-direction: column; gap: 8px; }
+    .mc-disclaimer { position: absolute; left: 24px; bottom: 24px; max-width: 440px; font-size: 11px; line-height: 1.7; color: var(--text-secondary); opacity: 0.75; }
   </style>
 
   <script>
@@ -981,7 +984,7 @@
     /* ---------- 功能介绍 / 更新日志 ---------- */
     var FEATURES = [
       { icon: 'fa-solid fa-cubes', name: '全版本支持', desc: '原版 / Forge / Fabric / NeoForge / Quilt / OptiFine，新版本发布即适配' },
-      { icon: 'fa-solid fa-user-shield', name: '多账号管理', desc: '支持微软正版、离线与第三方认证（Authlib / 皮肤站）多账号自由切换' },
+      { icon: 'fa-solid fa-user-shield', name: '多账号管理', desc: '支持离线与第三方认证（Authlib / 皮肤站）多账号自由切换' },
       { icon: 'fa-solid fa-bolt', name: '高速下载', desc: '多线程下载引擎 + BMCLAPI 国内镜像 + 断点续传，安装资源不再等待' },
       { icon: 'fa-solid fa-box-archive', name: '模组 / 整合包', desc: '内置下载中心，模组与整合包一键安装、启停、管理' },
       { icon: 'fa-solid fa-palette', name: '玻璃拟态主题', desc: '6 套毛玻璃主题右上角一键切换，界面圆润通透' },
@@ -989,7 +992,7 @@
       { icon: 'fa-solid fa-gem', name: '永久免费', desc: '无广告、无捆绑、无暗坑，隐私友好' },
     ];
     var CHANGELOG = [
-      { ver: '1.0', date: '2026-08-20', notes: ['首个正式版：玻璃拟态界面，无边框圆角窗口', '支持微软正版 / 离线 / 第三方认证多账号', '多线程下载引擎 + 内置国内镜像，安装资源不再等待'] },
+      { ver: '1.0', date: '2026-08-20', notes: ['首个正式版：玻璃拟态界面，无边框圆角窗口', '支持离线 / 第三方认证多账号', '多线程下载引擎 + 内置国内镜像，安装资源不再等待'] },
     ];
     function renderFeatures() {
       var host = $('featuresContent');
